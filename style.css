@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, red, green);
+    padding: 10px;
+
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: rgb(122, 120, 120);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 15px;
+}
+
+.todo-app h2 {
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    background-color: rgb(192, 242, 255);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button {
+    padding: 16px 50px;
+    outline: none;
+    border: none;
+    background: red;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('unchecked.png');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: rgb(14, 13, 20);
+    text-decoration: line-through;
+    font-size: 20px;
+}
+
+ul li.checked::before {
+    background-image: url('checked.png');
+
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background: rgb(57, 48, 48);
+    border-radius: 12px;
+    font-size: 22px;
+}
